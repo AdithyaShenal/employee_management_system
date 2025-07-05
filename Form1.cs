@@ -16,5 +16,10 @@ namespace employee_management_system
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

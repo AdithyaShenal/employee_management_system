@@ -9,10 +9,10 @@ namespace employee_management_system.models
 {
     internal class User
     {
-        private string name { get; set; }
-        private string email { get; set; }
-        private string password { get; set; }
-        private string username { get; set; }
+        public string name { get; private set; }
+        public string email { get; private set; }
+        public string password { get; private set; }
+        public string username { get; private set; }
 
         public User(string name, string password, string email, string username) {
             this.name = name;

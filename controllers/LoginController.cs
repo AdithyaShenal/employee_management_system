@@ -15,9 +15,8 @@ namespace employee_management_system.controllers
 
             using (SqlConnection conn = Database.GetConnection())
             {
-                conn.Open();
 
-                string sql = "SELECT name FROM admin WHERE username = @username AND password = @password";
+                string sql = "SELECT name FROM admins WHERE username = @username AND password = @password";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@username", username);
                 cmd.Parameters.AddWithValue("@password", password);
@@ -43,9 +42,8 @@ namespace employee_management_system.controllers
 
             using (SqlConnection conn = Database.GetConnection())
             {
-                conn.Open();
 
-                string checkSql = "SELECT COUNT(*) FROM Users WHERE username = @username";
+                string checkSql = "SELECT COUNT(*) FROM admins WHERE username = @username";
                 SqlCommand cmd = new SqlCommand(checkSql, conn);
                 cmd.Parameters.AddWithValue("@username", newUser.username);
                 int existingUserCount = (int)cmd.ExecuteScalar();
@@ -57,13 +55,13 @@ namespace employee_management_system.controllers
                 }
 
                 string insertSql = @"
-                    INSERT INTO Users (username, password, fullName, email) 
-                    VALUES (@username, @password, @fullname, @email)";
+                    INSERT INTO admins (username, password, name, email) 
+                    VALUES (@username, @password, @name, @email)";
 
                 SqlCommand insertCmd = new SqlCommand(insertSql, conn);
                 insertCmd.Parameters.AddWithValue("@username", newUser.username);
                 insertCmd.Parameters.AddWithValue("@password", newUser.password);
-                insertCmd.Parameters.AddWithValue("@fullname", newUser.name);
+                insertCmd.Parameters.AddWithValue("@name", newUser.name);
                 insertCmd.Parameters.AddWithValue("@email", newUser.email);
 
                 int rowsAffected = insertCmd.ExecuteNonQuery();

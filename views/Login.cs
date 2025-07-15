@@ -1,4 +1,5 @@
-﻿using System;
+﻿using employee_management_system.controllers;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -43,8 +44,23 @@ namespace employee_management_system.views
                 return;
             }
 
+            string name;
             // TODO: Add your login authentication here
-            MessageBox.Show($"Welcome, {username}!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            bool loginStatus = LoginController.Login(username, password, out name);
+
+            if (loginStatus)
+            {
+                MessageBox.Show($"Welcome, {name}!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                this.Hide();  // Hide current Login form
+                new Dashboard().Show(); // Show Dashboard form
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            
         }
 
         private void LinkCreateAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using employee_management_system.controllers;
+using employee_management_system.models;
 
 namespace employee_management_system.views
 {
@@ -75,16 +77,28 @@ namespace employee_management_system.views
                 return;
             }
 
-            // TODO: Add your registration logic here
+            User newUser = new User(fullName, password, email, username);
+
+
+            bool registerStatus = LoginController.Register( newUser, out string errorMsg);
+
+            if (!registerStatus)
+            {
+                MessageBox.Show(errorMsg, "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
 
             MessageBox.Show($"Account created for {fullName}!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close(); // Close the Register form
+            new Login().Show(); // Show the Login form
         }
 
         private void LinkBackToLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             var loginForm = new Login();
             loginForm.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

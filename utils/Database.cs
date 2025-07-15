@@ -11,6 +11,7 @@ namespace employee_management_system.utils
     internal class Database
     {
         private static string connectionString = "Server=DESKTOP-VISKOLU\\SQLEXPRESS;Database=ems_db;Trusted_Connection=True;";
+        //private static string connectionString = "Server=DESKTOP-VISKOLU\\SQLEXPRESS;Database=ems_db;Trusted_Connection=True;";
 
         public static SqlConnection GetConnection()
         {

@@ -10,9 +10,9 @@ namespace employee_management_system.utils
 {
     internal class Database
     {
-        private static string connectionString = "Server=DESKTOP-VISKOLU\\SQLEXPRESS;Database=ems_db;Trusted_Connection=True;";
         //private static string connectionString = "Server=DESKTOP-VISKOLU\\SQLEXPRESS;Database=ems_db;Trusted_Connection=True;";
-
+        //private static string connectionString = "Server=DESKTOP-VISKOLU\\SQLEXPRESS;Database=ems_db;Trusted_Connection=True;";
+        private static string connectionString = "Server=LAPTOP-EBAJN4GC\\SQLEXPRESS;Database=ems_db;Trusted_Connection=True;";
         public static SqlConnection GetConnection()
         {
             var conn = new SqlConnection(connectionString);

@@ -76,58 +76,69 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.information_panel);
             this.panel1.Controls.Add(this.navigator);
-            this.panel1.Location = new System.Drawing.Point(-4, -1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1345, 774);
+            this.panel1.Size = new System.Drawing.Size(1332, 768);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // history_button
             // 
+            this.history_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.history_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.history_button.Location = new System.Drawing.Point(546, 683);
+            this.history_button.Location = new System.Drawing.Point(546, 677);
             this.history_button.Name = "history_button";
             this.history_button.Size = new System.Drawing.Size(111, 41);
             this.history_button.TabIndex = 7;
             this.history_button.Text = "History";
             this.history_button.UseVisualStyleBackColor = true;
+            this.history_button.Click += new System.EventHandler(this.history_button_Click);
             // 
             // save_button
             // 
+            this.save_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.save_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.save_button.Location = new System.Drawing.Point(195, 683);
+            this.save_button.Location = new System.Drawing.Point(195, 677);
             this.save_button.Name = "save_button";
             this.save_button.Size = new System.Drawing.Size(111, 41);
             this.save_button.TabIndex = 6;
             this.save_button.Text = "Save";
             this.save_button.UseVisualStyleBackColor = true;
+            this.save_button.Click += new System.EventHandler(this.save_button_Click);
             // 
             // update_button
             // 
+            this.update_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.update_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.update_button.Location = new System.Drawing.Point(39, 683);
+            this.update_button.Location = new System.Drawing.Point(39, 677);
             this.update_button.Name = "update_button";
             this.update_button.Size = new System.Drawing.Size(105, 41);
             this.update_button.TabIndex = 5;
             this.update_button.Text = "Update";
             this.update_button.UseVisualStyleBackColor = true;
+            this.update_button.Click += new System.EventHandler(this.update_button_Click);
             // 
             // search_button
             // 
+            this.search_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.search_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search_button.Location = new System.Drawing.Point(517, 155);
+            this.search_button.Location = new System.Drawing.Point(504, 155);
             this.search_button.Name = "search_button";
             this.search_button.Size = new System.Drawing.Size(105, 28);
             this.search_button.TabIndex = 4;
             this.search_button.Text = "Search";
             this.search_button.UseVisualStyleBackColor = true;
+            this.search_button.Click += new System.EventHandler(this.search_button_Click);
             // 
             // userinput_textbox
             // 
+            this.userinput_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.userinput_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userinput_textbox.Location = new System.Drawing.Point(301, 155);
             this.userinput_textbox.Name = "userinput_textbox";
-            this.userinput_textbox.Size = new System.Drawing.Size(173, 24);
+            this.userinput_textbox.Size = new System.Drawing.Size(160, 24);
             this.userinput_textbox.TabIndex = 3;
             this.userinput_textbox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -158,6 +169,9 @@
             // 
             // information_panel
             // 
+            this.information_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.information_panel.BackColor = System.Drawing.Color.White;
             this.information_panel.Controls.Add(this.net_textbox);
             this.information_panel.Controls.Add(this.Christmas_textbox);
@@ -178,32 +192,35 @@
             this.information_panel.Controls.Add(this.emp_name_label);
             this.information_panel.Location = new System.Drawing.Point(39, 234);
             this.information_panel.Name = "information_panel";
-            this.information_panel.Size = new System.Drawing.Size(1262, 404);
+            this.information_panel.Size = new System.Drawing.Size(1249, 398);
             this.information_panel.TabIndex = 1;
             this.information_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.information_panel_Paint);
             // 
             // net_textbox
             // 
+            this.net_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.net_textbox.BackColor = System.Drawing.Color.Gray;
             this.net_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.net_textbox.Location = new System.Drawing.Point(992, 318);
+            this.net_textbox.Location = new System.Drawing.Point(979, 312);
             this.net_textbox.Name = "net_textbox";
             this.net_textbox.Size = new System.Drawing.Size(190, 27);
             this.net_textbox.TabIndex = 17;
             // 
             // Christmas_textbox
             // 
+            this.Christmas_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Christmas_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Christmas_textbox.Location = new System.Drawing.Point(507, 309);
+            this.Christmas_textbox.Location = new System.Drawing.Point(507, 303);
             this.Christmas_textbox.Name = "Christmas_textbox";
             this.Christmas_textbox.Size = new System.Drawing.Size(190, 27);
             this.Christmas_textbox.TabIndex = 16;
             // 
             // net_label
             // 
+            this.net_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.net_label.AutoSize = true;
             this.net_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.net_label.Location = new System.Drawing.Point(988, 273);
+            this.net_label.Location = new System.Drawing.Point(975, 267);
             this.net_label.Name = "net_label";
             this.net_label.Size = new System.Drawing.Size(87, 20);
             this.net_label.TabIndex = 15;
@@ -211,9 +228,10 @@
             // 
             // Christmas_label
             // 
+            this.Christmas_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Christmas_label.AutoSize = true;
             this.Christmas_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Christmas_label.Location = new System.Drawing.Point(503, 273);
+            this.Christmas_label.Location = new System.Drawing.Point(503, 267);
             this.Christmas_label.Name = "Christmas_label";
             this.Christmas_label.Size = new System.Drawing.Size(172, 20);
             this.Christmas_label.TabIndex = 14;
@@ -221,8 +239,9 @@
             // 
             // transport_textbox
             // 
+            this.transport_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.transport_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.transport_textbox.Location = new System.Drawing.Point(31, 309);
+            this.transport_textbox.Location = new System.Drawing.Point(31, 303);
             this.transport_textbox.Name = "transport_textbox";
             this.transport_textbox.Size = new System.Drawing.Size(190, 27);
             this.transport_textbox.TabIndex = 13;
@@ -230,8 +249,9 @@
             // 
             // bonus_textbox
             // 
+            this.bonus_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bonus_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bonus_textbox.Location = new System.Drawing.Point(992, 180);
+            this.bonus_textbox.Location = new System.Drawing.Point(979, 180);
             this.bonus_textbox.Name = "bonus_textbox";
             this.bonus_textbox.Size = new System.Drawing.Size(190, 27);
             this.bonus_textbox.TabIndex = 12;
@@ -247,9 +267,10 @@
             // 
             // tansport_label
             // 
+            this.tansport_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.tansport_label.AutoSize = true;
             this.tansport_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tansport_label.Location = new System.Drawing.Point(27, 273);
+            this.tansport_label.Location = new System.Drawing.Point(27, 267);
             this.tansport_label.Name = "tansport_label";
             this.tansport_label.Size = new System.Drawing.Size(162, 20);
             this.tansport_label.TabIndex = 10;
@@ -258,9 +279,10 @@
             // 
             // bonus_label
             // 
+            this.bonus_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bonus_label.AutoSize = true;
             this.bonus_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bonus_label.Location = new System.Drawing.Point(988, 147);
+            this.bonus_label.Location = new System.Drawing.Point(975, 147);
             this.bonus_label.Name = "bonus_label";
             this.bonus_label.Size = new System.Drawing.Size(139, 20);
             this.bonus_label.TabIndex = 9;
@@ -296,10 +318,11 @@
             // 
             // emp_grade_label
             // 
+            this.emp_grade_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.emp_grade_label.AutoSize = true;
             this.emp_grade_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.emp_grade_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emp_grade_label.Location = new System.Drawing.Point(1021, 23);
+            this.emp_grade_label.Location = new System.Drawing.Point(1008, 23);
             this.emp_grade_label.Name = "emp_grade_label";
             this.emp_grade_label.Size = new System.Drawing.Size(88, 25);
             this.emp_grade_label.TabIndex = 5;
@@ -308,10 +331,12 @@
             // 
             // richTextBox1
             // 
+            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(507, 3);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(371, 57);
+            this.richTextBox1.Size = new System.Drawing.Size(358, 57);
             this.richTextBox1.TabIndex = 4;
             this.richTextBox1.Text = " Science Faculty/ Department of \nComputer Science";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -352,16 +377,18 @@
             this.navigator.Controls.Add(this.adminname_textbox);
             this.navigator.Controls.Add(this.home_button);
             this.navigator.Controls.Add(this.label1);
-            this.navigator.Location = new System.Drawing.Point(3, 3);
+            this.navigator.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navigator.Location = new System.Drawing.Point(0, 0);
             this.navigator.Name = "navigator";
-            this.navigator.Size = new System.Drawing.Size(1335, 91);
+            this.navigator.Size = new System.Drawing.Size(1332, 91);
             this.navigator.TabIndex = 0;
             this.navigator.Paint += new System.Windows.Forms.PaintEventHandler(this.navigator_Paint);
             // 
             // adminname_textbox
             // 
+            this.adminname_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.adminname_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminname_textbox.Location = new System.Drawing.Point(1130, 30);
+            this.adminname_textbox.Location = new System.Drawing.Point(1127, 30);
             this.adminname_textbox.Name = "adminname_textbox";
             this.adminname_textbox.Size = new System.Drawing.Size(191, 34);
             this.adminname_textbox.TabIndex = 2;
@@ -369,10 +396,11 @@
             // 
             // home_button
             // 
+            this.home_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.home_button.BackColor = System.Drawing.Color.Teal;
             this.home_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("home_button.BackgroundImage")));
             this.home_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.home_button.Location = new System.Drawing.Point(995, 21);
+            this.home_button.Location = new System.Drawing.Point(992, 21);
             this.home_button.Margin = new System.Windows.Forms.Padding(0);
             this.home_button.Name = "home_button";
             this.home_button.Size = new System.Drawing.Size(62, 61);

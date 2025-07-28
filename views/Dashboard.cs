@@ -33,14 +33,14 @@ namespace employee_management_system.views
             {
                 RoundedButton btn = new RoundedButton(); // Make sure RoundedButton exists in this project
                 btn.Text = text;
-                btn.Size = new Size(190, 65);
+                btn.Size = new Size(205, 75);
                 btn.Location = location;
                 btn.FlatStyle = FlatStyle.Flat;
                 btn.ForeColor = Color.White;
                 btn.BackColor = Color.Teal;
                 btn.FlatAppearance.BorderSize = 3;
                 btn.FlatAppearance.BorderColor = Color.White;
-                btn.Font = new Font("Microsoft Sans Serif", 15, FontStyle.Bold);
+                btn.Font = new Font("Microsoft Sans Serif", 18, FontStyle.Bold);
                 btn.Cursor = Cursors.Hand;
                 return btn;
             }
@@ -65,8 +65,8 @@ namespace employee_management_system.views
         Chart pieChart = new Chart();
         pieChart.Series.Clear();
         pieChart.Invalidate(); // refresh the chart
-        pieChart.Size = new Size(600, 500);
-        pieChart.Location = new Point(650, 320);
+        pieChart.Size = new Size(565, 465);
+        pieChart.Location = new Point(320, 220);
         pieChart.ChartAreas.Add(new ChartArea());
         pieChart.Titles.Add("Department Ratio");
         pieChart.Titles[0].Font = new Font("Arial", 14, FontStyle.Bold);
@@ -98,7 +98,7 @@ namespace employee_management_system.views
         }
 
         pieChart.Series.Add(pieSeries);
-        panel3.Controls.Add(pieChart);
+        panel4.Controls.Add(pieChart);
 
 
 
@@ -125,7 +125,7 @@ namespace employee_management_system.views
                 }
 
                 // Present today
-                using (SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM employee_attendance WHERE CAST(attendance_date AS DATE) = CAST(GETDATE() AS DATE) AND status = 'Present'", conn))
+                using (SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM employee_attendance WHERE  status = 'Present'", conn))
                 {
                     totalPresent = (int)cmd.ExecuteScalar();
                 }
@@ -140,10 +140,10 @@ namespace employee_management_system.views
                 totalAbsent = totalEmployees - totalPresent;
             }
 
-            CreateStatPanel("Employees", totalEmployees, Color.FromArgb(52, 152, 219), "👥", 10);      // Blue
-            CreateStatPanel("Present", totalPresent, Color.FromArgb(46, 204, 113), "🧑‍💼", 170);        // Green
-            CreateStatPanel("Absent", totalAbsent, Color.FromArgb(231, 76, 60), "👎", 330);            // Red
-            CreateStatPanel("Late", totalLateComers, Color.FromArgb(241, 196, 15), "⏰", 490);         // Yellow
+            CreateStatPanel("Employees", totalEmployees, Color.FromArgb(52, 152, 219), "👥", 60);      // Blue
+            CreateStatPanel("Present", totalPresent, Color.FromArgb(46, 204, 113), "🧑‍💼", 370);        // Green
+            CreateStatPanel("Absent", totalAbsent, Color.FromArgb(231, 76, 60), "👎", 680);            // Red
+            CreateStatPanel("Late", totalLateComers, Color.FromArgb(241, 196, 15), "⏰", 990);         // Yellow
 
         }
 
@@ -151,8 +151,8 @@ namespace employee_management_system.views
         {
             // Parent container
             Panel statPanel = new Panel();
-            statPanel.Size = new Size(150, 90);
-            statPanel.Location = new Point(left, 50);
+            statPanel.Size = new Size(230, 150);
+            statPanel.Location = new Point(left, 30);
             statPanel.BackColor = backColor;
 
             // Rounded corners via paint event
@@ -180,12 +180,12 @@ namespace employee_management_system.views
             iconLabel.Font = new Font("Segoe UI Emoji", 20, FontStyle.Regular);
             iconLabel.Location = new Point(10, 10);
             iconLabel.AutoSize = true;
-            iconLabel.ForeColor = Color.White;
+            iconLabel.ForeColor = Color.Teal;
 
             // Value
             Label valueLabel = new Label();
             valueLabel.Text = value.ToString();
-            valueLabel.Font = new Font("Segoe UI", 18, FontStyle.Bold);
+            valueLabel.Font = new Font("Segoe UI", 22, FontStyle.Bold);
             valueLabel.Location = new Point(55, 12);
             valueLabel.AutoSize = true;
             valueLabel.ForeColor = Color.White;
@@ -193,7 +193,7 @@ namespace employee_management_system.views
             // Title
             Label titleLabel = new Label();
             titleLabel.Text = title;
-            titleLabel.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            titleLabel.Font = new Font("Segoe UI", 18, FontStyle.Bold);
             titleLabel.Location = new Point(15, 55);
             titleLabel.AutoSize = true;
             titleLabel.ForeColor = Color.White;
@@ -204,19 +204,10 @@ namespace employee_management_system.views
 
 
 
-            panel3.Controls.Add(statPanel);
+            panel4.Controls.Add(statPanel);
         }
 
-        // Optional hover effect if you're using button1
-        private void button1_MouseEnter(object sender, EventArgs e)
-        {
-            button1.BackColor = Color.MediumSeaGreen;
-        }
-
-        private void button1_MouseLeave(object sender, EventArgs e)
-        {
-            button1.BackColor = Color.DarkSeaGreen;
-        }
+       
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -239,6 +230,11 @@ namespace employee_management_system.views
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
         }

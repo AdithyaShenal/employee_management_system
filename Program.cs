@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace employee_management_system
+namespace employee_management_system.views
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace employee_management_system
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new views.Payroll());
+            Application.Run(new views.Dashboard());
         }
     }
 }

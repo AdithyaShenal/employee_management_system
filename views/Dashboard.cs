@@ -122,5 +122,10 @@ namespace employee_management_system.views
         {
             // Reserved
         }
+
+        private void btnTopbarAction_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

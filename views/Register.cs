@@ -96,8 +96,13 @@ namespace employee_management_system.views
 
         private void LinkBackToLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
             var loginForm = new Login();
             loginForm.Show();
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e) 
+        {
             this.Close();
         }
     }

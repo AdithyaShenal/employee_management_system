@@ -134,7 +134,6 @@
 //        }
 //    }
 //}
-
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -151,6 +150,8 @@ namespace employee_management_system.views
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTitle;
         private Guna.UI2.WinForms.Guna2BorderlessForm borderlessForm;
         private System.Windows.Forms.LinkLabel linkCreateAccount;
+        private Guna.UI2.WinForms.Guna2ImageButton btnClose;
+        private System.Windows.Forms.PictureBox pictureBox1;
 
         protected override void Dispose(bool disposing)
         {
@@ -163,6 +164,7 @@ namespace employee_management_system.views
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnClose = new Guna.UI2.WinForms.Guna2ImageButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
@@ -170,7 +172,6 @@ namespace employee_management_system.views
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.linkCreateAccount = new System.Windows.Forms.LinkLabel();
             this.borderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -180,7 +181,7 @@ namespace employee_management_system.views
             this.panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel1.BorderRadius = 20;
             this.panel1.BorderThickness = 1;
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblTitle);
             this.panel1.Controls.Add(this.txtUsername);
@@ -192,6 +193,22 @@ namespace employee_management_system.views
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1055, 500);
             this.panel1.TabIndex = 0;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.CheckedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnClose.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnClose.Image = global::employee_management_system.Properties.Resources.close_image;
+            this.btnClose.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnClose.ImageRotate = 0F;
+            this.btnClose.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnClose.Location = new System.Drawing.Point(1012, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.PressedState.ImageSize = new System.Drawing.Size(28, 28);
+            this.btnClose.Size = new System.Drawing.Size(40, 40);
+            this.btnClose.TabIndex = 6;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pictureBox1
             // 
@@ -277,19 +294,6 @@ namespace employee_management_system.views
             this.borderlessForm.DockIndicatorTransparencyValue = 0.5D;
             this.borderlessForm.TransparentWhileDrag = true;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::employee_management_system.Properties.Resources.close_image;
-            this.button2.Location = new System.Drawing.Point(3, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(61, 58);
-            this.button2.TabIndex = 0;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
             // Login
             // 
             this.BackColor = System.Drawing.Color.White;
@@ -305,8 +309,5 @@ namespace employee_management_system.views
             this.ResumeLayout(false);
 
         }
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private Button button2;
     }
 }

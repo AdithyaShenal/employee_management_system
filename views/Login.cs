@@ -76,6 +76,11 @@ namespace employee_management_system.views
         {
             this.Close();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 

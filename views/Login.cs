@@ -51,7 +51,7 @@ namespace employee_management_system.views
             if (loginStatus)
             {
                 MessageBox.Show($"Welcome, {name}!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+
                 this.Hide();  // Hide current Login form
                 new Dashboard().Show(); // Show Dashboard form
             }
@@ -59,8 +59,6 @@ namespace employee_management_system.views
             {
                 MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            
         }
 
         private void LinkCreateAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -69,5 +67,15 @@ namespace employee_management_system.views
             new Register().Show();    // Show Register form
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
+
